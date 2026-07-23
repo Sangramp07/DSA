@@ -8,7 +8,7 @@ public class linearS5 {
             {7,8,9}//2
         };
         int target =6;
-        int[] ans=search(arr, target);
+        int[] ans=search(arr, target);//return arr[row][col]
         System.out.println(Arrays.toString(ans));
     }
     static  int[] search (int[][] arr,int target){

@@ -1,26 +1,25 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class demo {
     public static void main(String[] args) {
-        int[] a= new int[5];
-        a[0]=10;
-        a[1]=20;
-        a[2]=30;
-        a[3]=40;
-        a[4]=30;
-        // a[6]=5;
-        for(int i=0; i<a.length; i++){
-            System.out.println(i);
-        }
-        int[] b=new int[4];
-        Scanner in=new Scanner(System.in);
-        System.out.println("enter elements in b=");
-        for(int i=0; i<b.length;i++){
-            b[i]=in.nextInt();
+        
+    
+    int[] num={2,3,4,5,6,7,8,9};
+    int target=6;
+    int ans=linearsearch(num, target);
+    System.out.println(ans);
 
+}
+    static int linearsearch(int[] num, int target){
+        if(num.length==0){
+            return -1;
         }
-        for(int i=0; i<b.length;i++){
-            System.out.println(b[i]);
+        for(int i=0;i<num.length;i++){
+            int element=num[i];
+            if(element==target){
+                return i;
+            }
         }
+        return -1;
     }
 }
