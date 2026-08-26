@@ -10,6 +10,8 @@ public class reverseString {
             s[right] = temp;
             left++;
             right--;
+
+            
         }
 
     }
