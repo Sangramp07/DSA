@@ -9,9 +9,7 @@ public class reverseString {
             s[left] = s[right];
             s[right] = temp;
             left++;
-            right--;
-
-            
+            right--;            
         }
 
     }
