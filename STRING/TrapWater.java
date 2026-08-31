@@ -7,7 +7,7 @@ public class TrapWater {
         int water=0;
         int left_max=height[left];
         int right_max=height[right];
-        
+
 
         while(left<right){
             if(left_max<right_max){
@@ -25,4 +25,7 @@ public class TrapWater {
         }
         return water;
     }
+
+
 }
+
