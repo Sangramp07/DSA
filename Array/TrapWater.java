@@ -1,4 +1,4 @@
-package STRING;
+
 
 public class TrapWater {
     public int tra(int[] height){

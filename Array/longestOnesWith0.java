@@ -1,4 +1,4 @@
-package STRING;
+
 
 public class longestOnesWith0 {
     public int longestOnes(int[] nums, int k) {

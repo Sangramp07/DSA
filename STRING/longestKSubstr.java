@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class longestKSubstr {
-    public int longestKSubstr(String s,int k){
+    public int longestKSubstrr(String s,int k){
         int n=s.length();
         int maxlen=-1;
         

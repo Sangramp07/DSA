@@ -1,9 +1,9 @@
-package STRING;
+
 
 import java.util.HashMap;
 
 public class subarraysWithKDistinct {
-    public int subarraysWithKDistinct(int[] nums,int k){
+    public int subarraysWithKDistinctt(int[] nums,int k){
         return atMost(nums, k)-atMost(nums, k-1);
     }
     private int atMost(int[] nums,int k){

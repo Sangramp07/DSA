@@ -1,4 +1,4 @@
-package STRING;
+
 
 public class MaxWaterInCOntainer {
     public int maxArea(int[] height){
