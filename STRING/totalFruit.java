@@ -3,7 +3,7 @@ package STRING;
 import java.util.HashMap;
 
 public class totalFruit {
-    public int totalFruit(int[] fruits){
+    public int totalFruitt(int[] fruits){
         int left=0,ans=0;
         HashMap<Integer,Integer> map=new HashMap<>();
 
