@@ -1,0 +1,20 @@
+package STRING;
+
+public class removeOuterParentheses {
+    public String removeOuterParentheses(String s) {
+        int cnt=0;
+        String  ans=new String();
+        for(int i=0;i<s.length();i++){
+            if(s.charAt(i)==')'){
+                cnt--;
+            }
+            if(cnt!=0){
+                ans+=s.charAt(i);
+            }
+            if(s.charAt(i)=='('){
+                cnt++;
+            }
+        }return ans;
+    }
+    
+}
