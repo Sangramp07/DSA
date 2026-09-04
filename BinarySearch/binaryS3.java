@@ -4,10 +4,10 @@ public class binaryS3 {
     public static void main(String[] args) {
         int[] arr={2,3,5,9,14,16,18};
         int target=13;
-        int ans=ceiling(arr, target);
+        int ans=floor(arr, target);
         System.out.println(ans);
     }
-    static int ceiling(int[] arr,int target){
+    static int floor(int[] arr,int target){
         int start=0;
         int end=arr.length-1;
 
