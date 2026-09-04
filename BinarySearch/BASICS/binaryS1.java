@@ -1,3 +1,4 @@
+package BASICS;
 public class binaryS1 {
     public static void main(String[] args) {
         int[] arr={20,18,17,15,14,12,9,6,4,2,1};

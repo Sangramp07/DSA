@@ -1,3 +1,4 @@
+package BASICS;
 public class binaryS2 {
     // CEILING NO: NUMBER WHICH IS GREATER AND
     // EQUAL TO THE TARGET

@@ -1,3 +1,4 @@
+package BASICS;
 public class binaryS4 {
     //smaller letter than given 
     public static void main(String[] args) {

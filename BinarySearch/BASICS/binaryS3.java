@@ -1,3 +1,4 @@
+package BASICS;
 public class binaryS3 {
 // floor NO: NUMBER WHICH IS Smaller AND 
 // EQUAL TO THE TARGET
