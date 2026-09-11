@@ -16,6 +16,8 @@ public class minOnSpeed {
         }
         return ans;
 
+        
+
     }
     private boolean canReach(int[] dist,double hour,int speed){
         double time=0.0;
