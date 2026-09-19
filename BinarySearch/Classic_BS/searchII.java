@@ -16,7 +16,7 @@ public class searchII {
              // Left half is sorted
              if(nums[low]<=nums[mid]){
                 if(nums[low]<=target
-                    && nums[mid]>=target
+                    && target<=nums[mid]
                 ){
                     high=mid-1;
                 }else{
@@ -26,7 +26,7 @@ public class searchII {
              //right half is sorted
              else{
                 if(nums[mid]<=target && target<=nums[high]){
-                    low=high+1;
+                    low=mid+1;
                 }else{
                     high=mid-1;
                 }
