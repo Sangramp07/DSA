@@ -1,12 +1,15 @@
 public class Recur {
+    
     public static void main(String[] args) {
-        print(1);
+        print(5);
     }
     static void print(int n){
-        if(n==10){
-            return;
+        if(n<1){
+            return ;
         }
-        System.out.println(n);
-        print(n+1);
+        System.out.print(n);
+        print(n-1); 
     }
 }
+
+
