@@ -4,9 +4,10 @@ import java.util.List;
 public class subsequenceWithSum {
     public static void main(String[] args) {
         int[] arr={1,2,3};
+        int target = 2;
         List<List<Integer>> result=new ArrayList<>();
 
-        findsubsequneces(0, arr, new ArrayList<>(), result,0);
+                findSubsequences(0, arr, new ArrayList<>(), 0, target);
 
         System.out.println("all subse:");
 
@@ -14,19 +15,27 @@ public class subsequenceWithSum {
             System.out.println(sub);
         }
     }
-    public  static void findsubsequneces(int index,int[] arr,List<Integer> current,List<List<Integer>> result,int sum){
-        if(s==sum){
-            System.out.println(arr);
-            return ;
+    public static void findSubsequences(int index, int[] arr, List<Integer> current, int currentSum, int targetSum) {
+        // Base Case: When we have traversed the entire array
+        if (index == arr.length) {
+            // Check if the accumulated sum matches our target sum
+            if (currentSum == targetSum) {
+                System.out.println(current);
+            }
+            return;
         }
 
+        // Choice 1: PICK the current element
         current.add(arr[index]);
-        findsubsequneces(index+1, arr, current, result,s);
+        // Move to next index and add the element's value to currentSum
+        findSubsequences(index + 1, arr, current, currentSum + arr[index], targetSum);
         
-        current.remove(current.size()-1);
+        // Backtrack: Remove the last added element before trying the next choice
+        current.remove(current.size() - 1);
 
-        findsubsequneces(index+1, arr, current, result);
-    
+        // Choice 2: DON'T PICK the current element
+        // Move to next index, keeping currentSum the same
+        findSubsequences(index + 1, arr, current, currentSum, targetSum);
     }
 
 }
