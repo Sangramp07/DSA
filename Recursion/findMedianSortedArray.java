@@ -14,15 +14,16 @@ public class findMedianSortedArray {
                 }else{
                     curr=nums2[j++];
                 }
-            }else if(i<m){
-                curr=nums2[j++];
+            } else if (i < m) {
+                curr = nums1[i++]; // Fixed: Read from nums1 when nums2 is exhausted
+            } else {
+                curr = nums2[j++]; // Added: Read from nums2 when nums1 is exhausted
             }
         }
-        if(total%2==0){
-            return  curr;
-        }
-        else{
-            return  (pre+curr)/2.0;
+        if (total % 2 == 0) {
+            return (pre + curr) / 2.0;
+        } else {
+            return curr;
         }
     }
 }
