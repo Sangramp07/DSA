@@ -10,6 +10,10 @@ public class subsetsWithDup {
                 return new ArrayList<>();
 
     }
+
+
+
+    
     public  static void findsubsequneces(int index,int[] nums,List<Integer> current,List<List<Integer>> result){
         if(index==nums.length){
             result.add(new ArrayList<>(current));
