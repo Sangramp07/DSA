@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class generateParenthesis {
+public class generateParenthesiss {
   
     public boolean isvalid(String str, int n) {
         int count = 0;
