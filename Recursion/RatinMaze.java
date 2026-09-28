@@ -11,21 +11,16 @@ public class RatinMaze {
             return;
         }
 
-
-        //Boundary Condition
         if( x < 0 || y<0 || x>=n || y>=n||maze[x][y]==0 ||visited[x][y] == true ){
             return;
         }
 
-
-        //Choices
         visited[x][y]=true;
         solve(maze,x-1,y,n,finalR,current+"U",visited);     //up
         solve(maze,x+1,y,n,finalR,current+"D",visited);    //down
         solve(maze,x,y-1,n,finalR,current+"L",visited);   //left
         solve(maze,x,y+1,n,finalR,current+"R",visited);  //right
 
-        //BackTrack kar rhe hain hum yha par
         visited[x][y]=false;
     }
     public ArrayList<String> ratInMaze(int[][] maze) {
