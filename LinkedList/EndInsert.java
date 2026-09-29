@@ -20,4 +20,11 @@ public class EndInsert {
         
     }
 
+    // if(head==null){
+    //     return new Node(x);
+
+    // }
+    // head.next=func(head.next,x);
+    // return head;
+
 }
