@@ -6,16 +6,18 @@ import LinkedList.ListNode;
 
 public class hasCycle {
     public boolean hasCycle(ListNode head) {
-        HashSet<ListNode> set=new HashSet<>();
-        ListNode curr=head;
-        while(curr!=null){
-            if (set.contains(curr)){
+       ListNode slow=head;
+       ListNode fast=head;
+
+       while (fast!=null && fast.next!=null) {
+            slow=slow.next;
+            fast=fast.next.next;
+
+            if(slow==fast){
                 return true;
             }
-            set.add(curr);
-            curr=curr.next;
-        }
-        return false;
+       }
+       return false;
         
     }
 }
