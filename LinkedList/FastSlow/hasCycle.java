@@ -1,0 +1,21 @@
+package LinkedList.FastSlow;
+
+import java.util.HashSet;
+
+import LinkedList.ListNode;
+
+public class hasCycle {
+    public boolean hasCycle(ListNode head) {
+        HashSet<ListNode> set=new HashSet<>();
+        ListNode curr=head;
+        while(curr!=null){
+            if (set.contains(curr)){
+                return true;
+            }
+            set.add(curr);
+            curr=curr.next;
+        }
+        return false;
+        
+    }
+}
