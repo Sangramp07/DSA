@@ -5,25 +5,31 @@ import java.util.Stack;
 import LinkedList.ListNode;
 
 public class removeNodes {
-     public ListNode removeNodes(ListNode head) {
-        Stack<ListNode> stack=new Stack<>();
+     public ListNode partition(ListNode head, int x) {
+        if (head == null) return null;
+
+        ListNode smalldummy=new ListNode(0);
+        ListNode largedummy=new ListNode(0);
+        ListNode small=smalldummy;
+        ListNode large=largedummy;
 
         ListNode curr=head;
 
-        while (curr != null) {
-            while (!stack.isEmpty() && stack.peek().val < curr.val) {
-                stack.pop();
-            }
-            stack.push(curr);
-            curr = curr.next;
-        }
-        ListNode dummy=new ListNode(0);
-        ListNode tail=dummy;
 
-        for(ListNode node:stack){
-            tail.next=node;
-            tail=tail.next;
+        while(curr!=null){
+            if(ListNode.val<x){
+                small.next=curr;
+                small=small.next;
+            }
+            else{
+                large.next=curr;
+                large=large.next;
+            }
+            curr=curr.next;
         }
-        return dummy.next;
+        small.next=largedummy.next;
+        large.next=null;
+
+        return smalldummy.next;
     }
 }
