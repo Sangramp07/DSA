@@ -1,4 +1,4 @@
-package LinkedList.UsingStack.hashmap;
+package LinkedList.UsingStack;
 
 import java.util.Stack;
 
