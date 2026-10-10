@@ -5,6 +5,7 @@ import OOP.polymorphism.number;
 class Node{
     int data;
     Node next;
+    public Object back;
     Node(int data1,Node next1){
         this.data=data1;
         this.next=next1;
@@ -12,6 +13,15 @@ class Node{
     Node(int data1){
         this.data=data1;
         this.next=null;
+    }
+    public Node(int i, Object object, Node prev) {
+        //TODO Auto-generated constructor stub
+    }
+    public Node(int i, Object object, Node prev) {
+        //TODO Auto-generated constructor stub
+    }
+    public Node(int i, Object object, Node prev) {
+        //TODO Auto-generated constructor stub
     }
 }
 public class ArrToDll {
